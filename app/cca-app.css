@@ -617,34 +617,35 @@ h1 {
 }
 .country-container .table-container {
   height: 600px;
-  overflow-y: auto;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  clear: both;
+  overflow: auto;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5), -1px -1px 2px 1px rgba(255, 255, 255, 0.3);
+}
+.country-container thead tr {
+  display: block;
   position: relative;
 }
-.country-container table {
-  width: 100%;
-}
-.country-container .head {
-  width: 100%;
-  position: fixed;
-  top: 70px;
-  left: 0;
-}
-.country-container .head tr {
-  width: 100%;
-}
 .country-container tbody {
-  margin-top: 2em;
+  display: block;
+  height: 573px;
+  overflow: auto;
 }
 .country-container th {
   width: 16.6666666%;
   background-color: #1180c2;
   color: #FFF;
-  line-height: 2em;
+  line-height: 25px;
+  height: 25px;
+  width: 200px;
 }
 .country-container td {
   text-align: center;
   background-color: #FFF;
   line-height: 1.5em;
+  width: 200px;
 }
 .country-container tr:nth-child(2n) td {
   background-color: #efefef;

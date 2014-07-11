@@ -1,6 +1,6 @@
 <div class="country-container">
 	<div class="table-container">
-		<table class="head">
+		<table>
 			<thead>
 			<tr>
 				<th>Name</th>
@@ -11,12 +11,6 @@
 				<th>Continent</th>
 			</tr>
 			</thead>
-			</table>
-			<table>
-			<tbody>
-			<tr>
-				<td colspan="6" style="line-height:2em;">&nbsp;</td>
-			</tr>	
 			<tr ng-repeat="country in countries.geonames">
 				<td>{{country.countryName}}</td>
 				<td>{{country.countryCode}}</td>
