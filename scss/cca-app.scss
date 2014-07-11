@@ -1,0 +1,73 @@
+@import "./_normalize.scss";
+@import "./_mixins.scss";
+@import "./_var.scss";
+@import "./_button.scss";
+
+html,body{
+	background-color:$gray;
+}
+h1{
+	text-align:center;
+	color:#FFF;
+	text-shadow:1px 1px 3px #000,-1px 0px 1px #333,-1px -1px 1px #333,1px -1px 1px #333;
+}
+.home-container{
+	width:500px;
+	margin:0 auto;
+	text-align:center;
+	color:#666;
+	
+	p{
+		text-align: left;
+		text-shadow:1px 1px 1px #eee;
+	}
+}
+.country-container{
+	text-align:center;
+	.table-container{
+		height:600px;
+		overflow-y:auto;
+		position:relative;
+	}
+	
+	table{
+		width:100%;
+	}
+	.head{
+		width:100%;
+		position:fixed;
+		top:70px;
+		left:0;
+		tr{
+			width: 100%;
+		}
+	}
+	tbody{
+		margin-top:2em;
+	}
+	th{
+		width:16.6666666%;
+		background-color:$blue;
+		color:#FFF;
+		line-height: 2em;
+	}
+	td{
+		text-align: center;
+		background-color:#FFF;
+		line-height: 1.5em;
+
+	}
+	tr:nth-child(2n){
+		td{
+			background-color:#efefef;
+		}		
+	}
+	tr:hover td{
+		cursor:pointer;
+		background-color:#666;
+		color:#FFF;
+	}
+	a.button{
+		margin:1em 0;
+	}
+}

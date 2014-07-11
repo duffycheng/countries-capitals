@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="ccaApp">
+<head>
+	<meta charset="utf-8">
+	<title>Countries & Capitals App</title>
+	<link rel="stylesheet" href="./cca-app.css">
+</head>
+<body>
+	<h1>Countries &amp; Capitals App</h1>
+	<div class="caa-view-container">
+		<div class="cca-view" ng-view></div>
+	</div>
+	
+	<!-- build:js ./_assets/combined.js -->
+	<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="./bower_components/angular-animate/angular-animate.js"></script>
+		<script type="text/javascript" src="./cca-library.js"></script>
+		<script type="text/javascript" src="./cca-app.js"></script>
+	<script type="text/javascript" src="./home/home.js"></script>
+	<script type="text/javascript" src="./countries/countries.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

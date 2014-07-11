@@ -1,0 +1,22 @@
+{
+  "name": "countries-capitals",
+  "version": "0.0.1",
+  "authors": [
+    "Pei Cheng <duffy.cheng@gmail.com>"
+  ],
+  "description": "Thinkful assignment 2-2-3",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.19",
+    "angular-route": "~1.2.19",
+    "angular-animate": "~1.2.19"
+  }
+}

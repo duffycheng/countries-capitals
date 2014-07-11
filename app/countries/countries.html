@@ -1,0 +1,32 @@
+<div class="country-container">
+	<div class="table-container">
+		<table class="head">
+			<thead>
+			<tr>
+				<th>Name</th>
+				<th>Country Code</th>
+				<th>Capital</th>
+				<th>Area in km<sup>2</sup></th>
+				<th>Population</th>
+				<th>Continent</th>
+			</tr>
+			</thead>
+			</table>
+			<table>
+			<tbody>
+			<tr>
+				<td colspan="6" style="line-height:2em;">&nbsp;</td>
+			</tr>	
+			<tr ng-repeat="country in countries.geonames">
+				<td>{{country.countryName}}</td>
+				<td>{{country.countryCode}}</td>
+				<td>{{country.capital}}</td>
+				<td>{{country.areaInSqKm}}</td>
+				<td>{{country.population | number:0}}</td>
+				<td>{{country.continentName}}</td>
+			</tr>
+			</tbody>
+	</table>
+	</div>
+	<a href="#/" class="button large">Home</a>
+</div>
