@@ -11,12 +11,12 @@
 				<th>Continent</th>
 			</tr>
 			</thead>
-			<tr ng-repeat="country in countries.geonames">
+			<tr ng-repeat="country in countries.geonames" ng-click="goToCapital(country.countryCode,country.countryName)">
 				<td>{{country.countryName}}</td>
 				<td>{{country.countryCode}}</td>
 				<td>{{country.capital}}</td>
-				<td>{{country.areaInSqKm}}</td>
-				<td>{{country.population | number:0}}</td>
+				<td>{{country.areaInSqKm | number}}</td>
+				<td>{{country.population | number}}</td>
 				<td>{{country.continentName}}</td>
 			</tr>
 			</tbody>

@@ -10,6 +10,9 @@
 	<div class="caa-view-container">
 		<div class="cca-view" ng-view></div>
 	</div>
+<div class="overlay" ng-class="{loading: isLoading}" ng-hide="!isLoading">
+	<div>LOADING...</div>
+</div>
 	
 	<!-- build:js ./_assets/combined.js -->
 	<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
@@ -19,6 +22,7 @@
 		<script type="text/javascript" src="./cca-app.js"></script>
 	<script type="text/javascript" src="./home/home.js"></script>
 	<script type="text/javascript" src="./countries/countries.js"></script>
+	<script type="text/javascript" src="./capital/capital.js"></script>
 	<!-- endbuild -->
 </body>
 </html>

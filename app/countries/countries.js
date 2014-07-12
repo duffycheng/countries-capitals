@@ -5,8 +5,17 @@ ccaModule.config(['$routeProvider', function($routeProvider) {
   });
 }]);
 
-ccaModule.controller('CountryController', ['ccaCountries','$scope', function(ccaCountries,$scope){
+ccaModule.controller('CountryController', ['ccaCountries','$scope','$location','$rootScope', function(ccaCountries,$scope,$location,$rootScope){
+	 $rootScope.isLoading = true;
+	 //country data
 	 ccaCountries().then(function(countries) {
-    $scope.countries = countries;
-  });
-}])
+	    $scope.countries = countries;
+	    $rootScope.isLoading = false;
+	  });
+
+	 //go to detail page
+	 $scope.goToCapital = function(contryCode,countryName){
+	 	var path = '/'+contryCode+"/"+countryName+'/capital';
+	 	$location.path(path);
+	 };
+}]);
