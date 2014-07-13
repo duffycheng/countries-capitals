@@ -6,6 +6,8 @@ var minifyCss = require('gulp-minify-css');
 var usemin = require('gulp-usemin');
 var rev = require('gulp-rev');
 var clean = require('gulp-clean');
+var deploy = require("gulp-gh-pages");
+
 
 gulp.task('copy-html-files', function(){
 	gulp.src(['./app/**/*.html', '!./app/index.html'], {base:'./app'})
@@ -27,6 +29,15 @@ gulp.task('connect', function() {
   });
 });
 
+var deploy = require("gulp-gh-pages");
+
+gulp.task('deploy', function () {
+    gulp.src("./build/**/*")
+        .pipe(deploy(options));
+});
+
 //Default task
 gulp.task('default', ['connect']);
 gulp.task('build',['copy-html-files', 'usemin']);
+
+gulp.task('deploy', ['deploy']);
