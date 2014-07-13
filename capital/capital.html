@@ -1,0 +1,38 @@
+<div class="capital-container">
+	<h2>{{country.geonames.0.countryName}} ({{country.geonames.0.countryCode}})</h2>
+	<ul>
+		<li>
+			<span class="filed">Population of Country:</span>
+			<span class="value">{{country.geonames.0.population | number}}</span>
+		</li>
+		<li>
+			<span class="filed">Area:</span>
+			<span class="value">{{country.geonames.0.areaInSqKm| number}} km<sup>2</sup></span>
+		</li>
+		<li>
+			<span class="filed">Capital:</span>
+			<span class="value">{{country.geonames.0.capital}}</span>
+		</li>
+		<li>
+			<span class="filed">Population of Capital:</span>
+			<span class="value">{{capital.geonames.0.population| number}}</span>
+		</li>
+		<li>
+			<span class="filed">{{neighbors.totalResultsCount}} neighbor(s):</span>
+			<span class="value">
+				<span ng-if="neighbors.totalResultsCount === 0">No country nearby....</span>
+				<span ng-repeat="neighbor in neighbors.geonames">
+				<a ng-href="#/{{neighbor.countryCode}}/{{neighbor.countryName}}/capital">{{neighbor.countryName}}</a>{{($last)?"":", "}}
+				</span>
+			</span>
+		</li>
+	</ul>
+	<div class="image">
+		<img ng-src="http://www.geonames.org/flags/x/{{country.geonames.0.countryCode | lowercase}}.gif" />
+		<img ng-src="http://www.geonames.org/img/country/250/{{country.geonames.0.countryCode | uppercase}}.png" />
+	</div>
+	<div class="action">
+			<a href="#/" class="button large">Home</a>
+			<a href="#/countries" class="button large">Browse Countries</a>
+	</div>
+</div>
