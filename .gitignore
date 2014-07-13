@@ -12,3 +12,4 @@ Thumbs.db
 config.rb
 compass_app_log.txt
 .sass-cache/*
+node_modules/*

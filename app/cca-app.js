@@ -1,5 +1,5 @@
 var ccaModule = angular.module('ccaApp',['ccaLibrary','ngRoute','ngAnimate']);
-ccaModule.run(function($rootScope, $location) {
+ccaModule.run(['$rootScope', '$location',function($rootScope, $location) {
     $rootScope.$on('$routeChangeError', function() {
         $location.path("/error");
     });
@@ -7,8 +7,6 @@ ccaModule.run(function($rootScope, $location) {
         $rootScope.isLoading = true;
     });
     $rootScope.$on('$routeChangeSuccess', function() {
-      // $timeout(function() {
         $rootScope.isLoading = false;
-      // }, 1000);
     });
-});
+}]);
